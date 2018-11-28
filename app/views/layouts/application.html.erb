@@ -11,9 +11,15 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    <nav class=" green lighten-4">
+  <div>
+  
+  
+  
+  
+  </div>
+    <nav class=" green lighten-4" id="nav">
       <div class="container nav-wrapper">
-        <div class="brand-logo">
+        <div class="brand-logo" id="logo">
           <%= link_to image_tag('logo_s.png') , root_path , class: "circle responsive-img" , :size => "50x50"%>
         </div>
         <div class="right">
@@ -34,6 +40,7 @@
         </div>
       </div>
     </nav>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
