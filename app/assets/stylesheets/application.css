@@ -1,11 +1,41 @@
-
-#logo{
-
-    left:-19%;
+#logo {
+  position: absolute;
+  left: 7px;
+  top: 0px;
+  display: inline;
 }
 
-#nav{
+#nav {
+  position: relative;
+  top: 102px;
+}
 
-  padding: 5%;
-  margin: 40px;
+#img_box {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+  top: 25px;
+}
+.languages {
+  position: absolute;
+  width: 50px;
+  top: 0;
+}
+.kid {
+  width: 90px;
+}
+
+#css_img {
+  right: 50px;
+}
+#html_img {
+  right: 100px;
+}
+#php_img {
+  right: 150px;
+}
+#js_img {
+  right: 200px;
 }

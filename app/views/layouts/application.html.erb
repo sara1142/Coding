@@ -11,21 +11,21 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    <div>
-      <%= image_tag('kid1.png') , class: "circle responsive-img"  , :size => "50x50"  %>
-      <%= image_tag('kidO.png') , class: "circle responsive-img"  , :size => "50x50"  %>
-      <%= image_tag('kid2.png') , class: "circle responsive-img"  , :size => "50x50"  %>
-      <%= image_tag('kid3.png') , class: "circle responsive-img"  , :size => "50x50"  %>
-      <%= image_tag('css.png') , class: "circle responsive-img"  , :size => "50x50"  %>
-      <%= image_tag('html.png') , class: "circle responsive-img"  , :size => "50x50"  %>
-      <%= image_tag('php.png') , class: "circle responsive-img"  , :size => "50x50"  %>
-      <%= image_tag('js.png') , class: "circle responsive-img"  , :size => "50x50"  %>
+    <div id="logo">
+      <%= link_to image_tag('logo_s (1).png') , root_path %>
     </div>
-    <nav class=" green lighten-4" id="nav">
+    <div id="img_box">
+      <%= image_tag "kid1 (1).png", id: "kid1", class: "kid"%>
+      <%= image_tag "kid0 (1).png" , id:"kid2", class: "kid"%>
+      <%= image_tag "kid2 (1).png"  , id:"kid3", class: "kid"%>
+      <%= image_tag "kid3 (1).png" , id:"kid4", class: "kid"%>
+      <%= image_tag "css (1).png" , id:"css_img", class: "languages"%>
+      <%= image_tag "html (1).png" , id:"html_img", class: "languages" %>
+      <%= image_tag "php (1).png" ,id:"php_img", class: "languages" %>
+      <%= image_tag "js (1).png",id:"js_img", class: "languages" %>
+    </div>
+    <nav class="indigo darken-4" id="nav">
       <div class="container nav-wrapper">
-        <div class="brand-logo" id="logo">
-          <%= link_to image_tag('logo_s.png') , root_path , class: "circle responsive-img" , :size => "50x50"%>
-        </div>
         <div class="right">
           <%= link_to "Games" %>
           <% if user_signed_in? %>
