@@ -11,12 +11,16 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-  <div>
-  
-  
-  
-  
-  </div>
+    <div>
+      <%= image_tag('kid1.png') , class: "circle responsive-img"  , :size => "50x50"  %>
+      <%= image_tag('kidO.png') , class: "circle responsive-img"  , :size => "50x50"  %>
+      <%= image_tag('kid2.png') , class: "circle responsive-img"  , :size => "50x50"  %>
+      <%= image_tag('kid3.png') , class: "circle responsive-img"  , :size => "50x50"  %>
+      <%= image_tag('css.png') , class: "circle responsive-img"  , :size => "50x50"  %>
+      <%= image_tag('html.png') , class: "circle responsive-img"  , :size => "50x50"  %>
+      <%= image_tag('php.png') , class: "circle responsive-img"  , :size => "50x50"  %>
+      <%= image_tag('js.png') , class: "circle responsive-img"  , :size => "50x50"  %>
+    </div>
     <nav class=" green lighten-4" id="nav">
       <div class="container nav-wrapper">
         <div class="brand-logo" id="logo">
@@ -40,7 +44,6 @@
         </div>
       </div>
     </nav>
-
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
