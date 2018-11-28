@@ -4,12 +4,22 @@
     <title>CodingForKids</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <% if user_signed_in? %>
+      <p>Stuff for logged in users</p>
+    <% else %>
+      <p>Stuff for logged out users</p>
+    <% end %>
+    <%= link_to 'Log In', new_user_session_path %> <%= link_to "Sign Up",
+new_user_registration_path %>
+    <%= link_to "Edit Logged In User", edit_user_registration_path %> <%= link_to
+'Log Out', destroy_user_session_path, method: :delete %> <%= link_to 'Delete
+Account', user_registration_path, method: :delete %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
