@@ -1,7 +1,7 @@
 #logo {
   position: absolute;
-  left: 7px;
-  top: 0px;
+  left: -25px;
+  top: -2px;
   display: inline;
 }
 
@@ -25,17 +25,39 @@
 }
 .kid {
   width: 90px;
+  padding: 1px;
+  margin: 4px;
+  
 }
 
 #css_img {
-  right: 50px;
+  right: 350px;
+  height: 80px;
+  width: 80px;
+  top: -25px;
 }
 #html_img {
-  right: 100px;
+  right: 1000px;
+  height: 80px;
+  width: 80px;
+  top: -25px;
 }
 #php_img {
-  right: 150px;
+  right: 40px;
+  height: 100px;
+  width: 100px;
+  top: -20px;
+
 }
 #js_img {
   right: 200px;
+  height: 80px;
+  width: 80px;
+  top: -3px;
+
+}
+a {
+  margin: 40px;
+  font-family: 'Bubblegum Sans', cursive;
+
 }
