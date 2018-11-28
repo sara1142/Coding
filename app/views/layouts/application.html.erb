@@ -5,19 +5,35 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    <% if user_signed_in? %>
-      <p>Stuff for logged in users</p>
-    <% else %>
-      <p>Stuff for logged out users</p>
-    <% end %>
-    <%= link_to 'Log In', new_user_session_path %> <%= link_to "Sign Up",
-new_user_registration_path %>
-    <%= link_to "Edit Logged In User", edit_user_registration_path %> <%= link_to
-'Log Out', destroy_user_session_path, method: :delete %> <%= link_to 'Delete
-Account', user_registration_path, method: :delete %>
+    <nav class=" green lighten-4">
+      <div class="container nav-wrapper">
+        <div class="brand-logo">
+          <%= link_to image_tag('logo_s.png') , root_path , class: "circle responsive-img" , :size => "50x50"%>
+        </div>
+        <div class="right">
+          <%= link_to "Games" %>
+          <% if user_signed_in? %>
+            <a href="<%=  user_path(current_user) %>">
+              <% if current_user.image.url %>
+                <%= cl_image_tag current_user.image, class: "circle responsive-img"  , :size => "50x50" %>
+              <% else %>
+                <%= cl_image_tag image_tag('avatar_b.png'), class: "circle responsive-img"  , :size => "50x50" %>
+              <% end %>
+            </a>
+            <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to "Log in", new_user_session_path %>
+            <%= link_to "Sign Up", new_user_registration_path %>
+          <% end %>
+        </div>
+      </div>
+    </nav>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
