@@ -19,13 +19,14 @@
       <%= image_tag "kid0 (1).png" , id:"kid2", class: "kid"%>
       <%= image_tag "kid2 (1).png"  , id:"kid3", class: "kid"%>
       <%= image_tag "kid3 (1).png" , id:"kid4", class: "kid"%>
-      <%= image_tag "css (1).png" , id:"css_img", class: "languages"%>
-      <%= image_tag "html (1).png" , id:"html_img", class: "languages" %>
-      <%= image_tag "php (1).png" ,id:"php_img", class: "languages" %>
-      <%= image_tag "js (1).png",id:"js_img", class: "languages" %>
+      <%= image_tag "CSS (1).png" , id:"css_img", class: "languages"%>
+      <%= image_tag "HTML (1)" , id:"html_img", class: "languages" %>
+      <%= image_tag "PHP (1).png" ,id:"php_img", class: "languages" %>
+      <%= image_tag "JS (1).png",id:"js_img", class: "languages" %>
+      <%= image_tag "python.png",id:"python_img", class: "languages" %>
     </div>
-    <nav class="indigo darken-4" id="nav">
-      <div class="container nav-wrapper">
+    <nav id="nav">
+      <div>
         <div class="right">
           <%= link_to "Games" %>
           <% if user_signed_in? %>

@@ -8,6 +8,8 @@
 #nav {
   position: relative;
   top: 102px;
+  background-color: black;
+  text-align: center;
 }
 
 #img_box {
@@ -27,7 +29,6 @@
   width: 90px;
   padding: 1px;
   margin: 4px;
-  
 }
 
 #css_img {
@@ -42,22 +43,25 @@
   width: 80px;
   top: -25px;
 }
+#python_img {
+  right: 1150px;
+  top: -25px;
+  height: 90px;
+  width: 90px;
+}
 #php_img {
   right: 40px;
   height: 100px;
   width: 100px;
-  top: -20px;
-
+  top: -31px;
 }
 #js_img {
   right: 200px;
   height: 80px;
   width: 80px;
-  top: -3px;
-
+  top: -30px;
 }
 a {
   margin: 40px;
-  font-family: 'Bubblegum Sans', cursive;
-
+  font-family: "Bubblegum Sans", cursive;
 }
