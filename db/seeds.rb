@@ -46,8 +46,9 @@ x = !x;
   height:600px ;
  position: absolute;
   bottom:50%;
-  right:50%;
+  right:30%;
   top: 50%;
+
 }
 " "",
 )

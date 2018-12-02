@@ -1,12 +1,12 @@
 #logo {
-  position: absolute;
-  left: -25px;
-  top: -2px;
+  position: fixed;
+  left: 2px;
+  top: -3px;
   display: inline;
 }
 
 #nav {
-  position: relative;
+  position: fixed;
   top: 102px;
   background-color: black;
   text-align: center;
@@ -44,7 +44,7 @@
   top: -25px;
 }
 #python_img {
-  right: 1100px;
+  right: 850px;
   top: -25px;
   height: 90px;
   width: 90px;
@@ -64,4 +64,19 @@
 a {
   margin: 40px;
   font-family: "Bubblegum Sans", cursive;
+}
+
+.game-target {
+
+  position: absolute;
+  left: 50%;
+  bottom: -80%;
+}
+
+#output{
+
+  position: fixed;
+left: 80%;
+bottom: 20%;
+
 }
