@@ -28,7 +28,7 @@
     <nav id="nav">
       <div>
         <div class="right">
-          <%= link_to "Games" %>
+          <%= link_to "Games" , games_path %>
           <% if user_signed_in? %>
             <a href="<%=  user_path(current_user) %>">
               <% if current_user.image.url %>
