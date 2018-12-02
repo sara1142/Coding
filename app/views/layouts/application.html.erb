@@ -12,23 +12,24 @@
   </head>
   <body>
     <div id="logo">
-      <%= link_to image_tag('logo_s (1).png') , root_path %>
+      <%= image_tag "logos(1).png" %>
     </div>
     <div id="img_box">
-      <%= image_tag "kid1 (1).png", id: "kid1", class: "kid"%>
-      <%= image_tag "kid0 (1).png" , id:"kid2", class: "kid"%>
-      <%= image_tag "kid2 (1).png"  , id:"kid3", class: "kid"%>
-      <%= image_tag "kid3 (1).png" , id:"kid4", class: "kid"%>
-      <%= image_tag "CSS (1).png" , id:"css_img", class: "languages"%>
-      <%= image_tag "HTML (1)" , id:"html_img", class: "languages" %>
-      <%= image_tag "PHP (1).png" ,id:"php_img", class: "languages" %>
-      <%= image_tag "JS (1).png",id:"js_img", class: "languages" %>
+      <%= image_tag "kid1(1).png", id: "kid1", class: "kid"%>
+      <%= image_tag "kid0(1).png" , id:"kid2", class: "kid"%>
+      <%= image_tag "kid2(1).png"  , id:"kid3", class: "kid"%>
+      <%= image_tag "kid3(1).png" , id:"kid4", class: "kid"%>
+      <%= image_tag "css(1).png" , id:"css_img", class: "languages"%>
+      <%= image_tag "html(1)" , id:"html_img", class: "languages" %>
+      <%= image_tag "php(1).png" ,id:"php_img", class: "languages" %>
+      <%= image_tag "js(1).png",id:"js_img", class: "languages" %>
       <%= image_tag "python.png",id:"python_img", class: "languages" %>
     </div>
     <nav id="nav">
       <div>
         <div class="right">
-          <%= link_to "Games" %>
+       <%= link_to image_tag "iconG.png",id:"G" %>
+        
           <% if user_signed_in? %>
             <a href="<%=  user_path(current_user) %>">
               <% if current_user.image.url %>
@@ -37,7 +38,7 @@
                 <%= cl_image_tag image_tag('avatar_b.png'), class: "circle responsive-img"  , :size => "50x50" %>
               <% end %>
             </a>
-            <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+            <%= link_to image_tag "logout.png","Log Out", destroy_user_session_path, method: :delete %>
           <% else %>
             <%= link_to "Log in", new_user_session_path %>
             <%= link_to "Sign Up", new_user_registration_path %>
