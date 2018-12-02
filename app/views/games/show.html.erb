@@ -1,2 +1,9 @@
-<h1>Games#show</h1>
-<p>Find me in app/views/games/show.html.erb</p>
+<div>
+  <style>
+    <%= @game.css %>
+  </style>
+  <%= raw @game.html %>
+  <script>
+    <%= @game.javascript.html_safe %>
+  </script>
+</div>
