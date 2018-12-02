@@ -28,7 +28,7 @@
     <nav id="nav">
       <div>
         <div class="right">
-       <%= link_to image_tag "iconG.png",id:"G" %>
+       <%= link_to "Games",id:"G" %>
         
           <% if user_signed_in? %>
             <a href="<%=  user_path(current_user) %>">
@@ -38,7 +38,7 @@
                 <%= cl_image_tag image_tag('avatar_b.png'), class: "circle responsive-img"  , :size => "50x50" %>
               <% end %>
             </a>
-            <%= link_to image_tag "logout.png","Log Out", destroy_user_session_path, method: :delete %>
+            <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
           <% else %>
             <%= link_to "Log in", new_user_session_path %>
             <%= link_to "Sign Up", new_user_registration_path %>
