@@ -8,50 +8,55 @@
 
 Game.destroy_all
 
-Game.create(
-  javascript: "" "
+Game.create(javascript: "" "
 var jsRuns = [];
-
-  var button = document.querySelector(\".game-target\");
-var x = true ;
-button.addEventListener('click', Move)
-function Move(){
-    console.log('Test')
-  jsRuns.push(\"Move()\");
-  document.querySelector(\"#output\").innerHTML = jsRuns.join(\"<br>\");
-if(x){
-  document.querySelector(\".robot-img\").src=\"https://res.cloudinary.com/dkfx04d8y/image/upload/v1543748671/RRight.png\";
-}else{
-   document.querySelector(\".robot-img\").src=\"https://res.cloudinary.com/dkfx04d8y/image/upload/v1543748670/RLeft.png\";
+var button = document.querySelector('.robot-icon');
+var x = true;
+button.addEventListener('click', Move);
+function sound() {
+  var audio = document.getElementById('audio');
+  audio.play();
 }
-x = !x;
-}
-    " "",
-  html: "" "
-  <div class='robot-game'>
-    <button class=\"game-target\">Move</button>
-    </div>
-    <div>
-    <img class=\"robot-img\"src=\"https://res.cloudinary.com/dkfx04d8y/image/upload/v1543748671/RRight.png\">
-    </div>
-    <div id=\"output\"></div>
-    </div>
-    " "",
-  css: "" "
-  .robot-game{
-   
+function Move() {
+  sound();
+  jsRuns.push('Move()');
+  if (x) {
+    document.querySelector('.robot-img').src =
+      'https://res.cloudinary.com/dkfx04d8y/image/upload/v1543740626/rebo_L.png';
+  } else {
+    document.querySelector('.robot-img').src =
+      'https://res.cloudinary.com/dkfx04d8y/image/upload/v1543740626/rebo_R.png';
   }
- .robot-img{
-  width: 600 px;
-  height:600px ;
- position: relative;
-  bottom:30%;
-  right:-30%;
-  top:0%;
-
+  x = !x;
 }
-" "",
-)
+    " "",
+            html: "" "
+  <div class='robot-game'>
+      <button class='robot-icon'>Move</button>
+      <img class='robot-img' src='https://res.cloudinary.com/dkfx04d8y/image/upload/v1543740626/rebo_R.png' >
+      <audio id='audio' src='https://res.cloudinary.com/dkfx04d8y/video/upload/v1543835520/Short-electronic-background-music.mp3'></audio>
+    </div>
+     " " ",
+            css: "" "
+  .robot-game {
+  position: fixed;
+  border: 1px solid gray;
+  background-image: url(https://res.cloudinary.com/dkfx04d8y/image/upload/v1543829131/nature.png);
+  width: 600px;
+  height: 600px;
+}
+.robot-img {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 200px;
+  right: 100px;
+}
+.robot-icon {
+  position: absolute;
+  top: 50px;
+}
+" "")
 
 Game.create(
   javascript: "" "
@@ -73,9 +78,13 @@ var solution = [
 var button = document.querySelector('button');
 
 button.addEventListener('click', jump);
-
+function sound() {
+  var audio = document.getElementById('audio');
+  audio.play();
+}
 function jump() {
   jumps.push('jump()');
+  sound();
   $('#rabitt-img').animate(
     {
       left: '+=25',
@@ -113,6 +122,7 @@ function jump() {
     <div id='Ribt-game'>
       <img id='rabitt-img' src='https://res.cloudinary.com/dkfx04d8y/image/upload/v1543823699/rabitt.png' />
       <img id='carrot-img' src='https://res.cloudinary.com/dkfx04d8y/image/upload/v1543823638/Carrot.png' />
+      <audio id='audio' src='https://res.cloudinary.com/dkfx04d8y/video/upload/v1543838479/Lounge-deep-house-chillout-music-synth-theme-loop.mp3'></audio>
       <button type='button' id='jump-icon'>jump</button>
     </div>
    
@@ -122,7 +132,7 @@ function jump() {
 " "",
   css: "" "
 #Ribt-game {
-  background-image: url('https://res.cloudinary.com/dkfx04d8y/image/upload/v1543823574/nat.png');
+  background-image: url(https://res.cloudinary.com/dkfx04d8y/image/upload/v1543823574/nat.png);
   height: 500px;
   width: 800px;
   position: fixed;

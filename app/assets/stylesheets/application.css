@@ -1,8 +1,7 @@
-body{
+body {
   position: absolute;
-    top: 170px;
+  top: 170px;
 }
-
 
 #logo {
   position: fixed;
@@ -73,16 +72,17 @@ a {
 }
 
 .game-target {
-
   position: absolute;
   left: 50%;
   bottom: -80%;
 }
 
-#output{
-
+#output {
   position: fixed;
-left: 80%;
-bottom: 20%;
-
+  left: 80%;
+  bottom: 20%;
+}
+.game-box {
+  left: 300px;
+  top: 900px;
 }
