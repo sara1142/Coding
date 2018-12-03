@@ -39,7 +39,7 @@ function Move() {
      " " ",
             css: "" "
   .robot-game {
-  position: fixed;
+  position: relative;
   border: 1px solid gray;
   background-image: url(https://res.cloudinary.com/dkfx04d8y/image/upload/v1543829131/nature.png);
   width: 600px;
@@ -110,33 +110,19 @@ function jump() {
 }
 " "",
   html: "" "
-<html>
-  <head>
-    <meta charset='utf-8' />
-    <meta name='viewport' content='width=device-width' />
-    <title>repl.it</title>
-    <link href='style.css' rel='stylesheet' type='text/css' />
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-  </head>
-
-  <body>
     <div id='Ribt-game'>
       <img id='rabitt-img' src='https://res.cloudinary.com/dkfx04d8y/image/upload/v1543823699/rabitt.png' />
       <img id='carrot-img' src='https://res.cloudinary.com/dkfx04d8y/image/upload/v1543823638/Carrot.png' />
       <audio id='audio' src='https://res.cloudinary.com/dkfx04d8y/video/upload/v1543838479/Lounge-deep-house-chillout-music-synth-theme-loop.mp3'></audio>
       <button type='button' id='jump-icon'>jump</button>
     </div>
-   
-    <script src='main.js'></script>
-  </body>
-</html>
 " "",
   css: "" "
 #Ribt-game {
   background-image: url(https://res.cloudinary.com/dkfx04d8y/image/upload/v1543823574/nat.png);
   height: 500px;
   width: 800px;
-  position: fixed;
+  position: relative;
   border: 1px solid gray;
 }
 #jump-icon {

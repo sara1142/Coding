@@ -1,9 +1,9 @@
-<div id="game-box">
   <style>
-    <%= @game.css %>
-  </style>
+  <%= @game.css %>
+</style>
+<div id="game-box">
   <%= raw @game.html %>
-  <script>
-    <%= @game.javascript.html_safe %>
-  </script>
 </div>
+<script>
+  <%= @game.javascript.html_safe %>
+</script>
