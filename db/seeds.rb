@@ -52,3 +52,101 @@ x = !x;
 }
 " "",
 )
+
+Game.create(
+  javascript: "" "
+var jumps = [];
+var solution = [
+  'jump()',
+  'jump()',
+  'jump()',
+  'jump()',
+  'jump()',
+  'jump()',
+  'jump()',
+  'jump()',
+  'jump()',
+  'jump()',
+  'jump()'
+];
+
+var button = document.querySelector('button');
+
+button.addEventListener('click', jump);
+
+function jump() {
+  jumps.push('jump()');
+  $('#rabitt-img').animate(
+    {
+      left: '+=25',
+      top: '-=25'
+    },
+    500,
+    function() {
+      $('#rabitt-img').animate(
+        {
+          left: '+=25',
+          top: '+=25'
+        },
+        500,
+        function() {
+          if (jumps.toString() === solution.toString()) {
+            alert('Well done!');
+          }
+        }
+      );
+    }
+  );
+}
+" "",
+  html: "" "
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width' />
+    <title>repl.it</title>
+    <link href='style.css' rel='stylesheet' type='text/css' />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  </head>
+
+  <body>
+    <div id='Ribt-game'>
+      <img id='rabitt-img' src='https://res.cloudinary.com/dkfx04d8y/image/upload/v1543823699/rabitt.png' />
+      <img id='carrot-img' src='https://res.cloudinary.com/dkfx04d8y/image/upload/v1543823638/Carrot.png' />
+      <button type='button' id='jump-icon'>jump</button>
+    </div>
+   
+    <script src='main.js'></script>
+  </body>
+</html>
+" "",
+  css: "" "
+#Ribt-game {
+  background-image: url('https://res.cloudinary.com/dkfx04d8y/image/upload/v1543823574/nat.png');
+  height: 500px;
+  width: 800px;
+  position: fixed;
+  border: 1px solid gray;
+}
+#jump-icon {
+  left: 70px;
+  top: 10%;
+  position: absolute;
+}
+#rabitt-img {
+  width: 100px;
+  height: 100px;
+  left: 70px;
+  top: 69%;
+  position: absolute;
+}
+
+#carrot-img {
+  width: 70x;
+  height: 70px;
+  right: 70px;
+  top: 70%;
+  position: absolute;
+}
+" "",
+)

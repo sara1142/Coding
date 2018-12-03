@@ -1,18 +1,18 @@
 development:
-  cloud_name: dkfx04d8y
-  api_key: '377739272157659'
-  api_secret: TN7Y2dEosXBhggPpfAzuRjgRjx4
+  cloud_name: <%= Rails.application.credentials.dig(:cloudinary, :cloud_name) %>
+  api_key: <%= Rails.application.credentials.dig(:cloudinary, :api_key) %>
+  api_secret: <%= Rails.application.credentials.dig(:cloudinary, :api_secret) %>
   enhance_image_tag: true
   static_image_support: false
 production:
-  cloud_name: dkfx04d8y
-  api_key: '377739272157659'
-  api_secret: TN7Y2dEosXBhggPpfAzuRjgRjx4
+  cloud_name: <%= Rails.application.credentials.dig(:cloudinary, :cloud_name) %>
+  api_key: <%= Rails.application.credentials.dig(:cloudinary, :api_key) %>
+  api_secret: <%= Rails.application.credentials.dig(:cloudinary, :api_secret) %>
   enhance_image_tag: true
   static_image_support: true
 test:
-  cloud_name: dkfx04d8y
-  api_key: '377739272157659'
-  api_secret: TN7Y2dEosXBhggPpfAzuRjgRjx4
+  cloud_name: <%= Rails.application.credentials.dig(:cloudinary, :cloud_name) %>
+  api_key: <%= Rails.application.credentials.dig(:cloudinary, :api_key) %>
+  api_secret: <%= Rails.application.credentials.dig(:cloudinary, :api_secret) %>
   enhance_image_tag: true
   static_image_support: false
