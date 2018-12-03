@@ -1,6 +1,5 @@
 body {
-  position: absolute;
-  top: 170px;
+  padding-top: 170px;
 }
 
 #logo {
@@ -90,4 +89,9 @@ a {
 .game-box {
   left: 300px;
   top: 900px;
+}
+
+#game-box {
+  display: flex;
+  justify-content: center;
 }
