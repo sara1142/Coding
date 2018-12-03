@@ -44,10 +44,10 @@ x = !x;
  .robot-img{
   width: 600 px;
   height:600px ;
- position: absolute;
-  bottom:50%;
-  right:30%;
-  top: 50%;
+ position: relative;
+  bottom:30%;
+  right:-30%;
+  top:0%;
 
 }
 " "",
