@@ -100,7 +100,8 @@ function jump() {
         500,
         function() {
           if (jumps.toString() === solution.toString()) {
-            alert('Well done!');
+            $('#carrot-img').hide();
+            setTimeout(function(){ location.reload(); }, 3000);
           }
         }
       );
