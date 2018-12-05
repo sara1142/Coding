@@ -14,3 +14,26 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+$(document).on("turbolinks:load", function() {
+  $(".right").on("mouseover", function() {
+    $(".spinner").css({
+      "animation-play-state": "running"
+    });
+  });
+  $(".right").on("mouseout", function() {
+    $(".spinner").css({
+      "animation-play-state": "paused"
+    });
+  });
+  $(".left").on("mouseover", function() {
+    $(".innerSpinner").css({
+      "animation-play-state": "running"
+    });
+  });
+  $(".left").on("mouseout", function() {
+    $(".innerSpinner").css({
+      "animation-play-state": "paused"
+    });
+  });
+});

@@ -1,2 +1,59 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container spinner-container">
+  <div class="spinner rightSpin">
+    <div class="leftSpin innerSpinner">
+      <img src="https://kidsknowit.com/wp-content/themes/kids-know-it-main/img/wheel.png" alt="">
+      <ul>
+        <li id="orange">
+          <%= link_to @games[0] do %>
+            <%=image_tag "rebo (2) (2).png"%><br>
+            Orange
+          <% end %>
+        </li>
+        <li id="yellwo">
+          <%= link_to @games[1] do %>
+            <%=image_tag "rab (1).png"%><br>
+            yellow
+          <% end %>
+        </li>
+        <li id="yellow2">
+          <%= link_to @games[2] do %>
+            <%=image_tag "piano.png"%><br>
+          <% end %>
+          yellow2<br>
+        </li>
+        <li id="red">
+          <%= link_to @games[3] do %>
+            <%=image_tag "AA.png"%><br>
+          <% end %>
+          red</li>
+        <li id="purple">
+          <%= link_to @games[4] do %>
+            <%=image_tag "A1.png"%><br>
+          <%end %>
+          purple</li>
+        <li id="blue">
+          <%= link_to @games[5] do %>
+            <%=image_tag "AA1.png"%><br>
+          <% end %>
+          blue</li>
+        <li id="blue2">
+          <%= link_to @games[6] do %>
+            <%=image_tag "A (1).png"%><br>
+          <% end %>
+          blue</li>
+        <li id="green">
+          <%= link_to @games[7] do %>
+            <%=image_tag "AA0.png"%><br>
+          <% end %>
+          green</li>
+        <li id="green2">
+          <%= link_to @games[8] do %>
+            <%=image_tag "A1.png"%><br>
+          <% end %>
+          green</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<%= image_tag "R (1).png" ,class:"left" %>
+<%= image_tag "L (1).png" ,class:"right" %>

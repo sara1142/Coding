@@ -1,92 +1,131 @@
 body {
-  padding-top: 170px;
+  /* padding-top: 170px; */
+  font-family: "Roboto Mono", monospace;
+  background-image: url("bg (2).png");
+  background-size: cover;
+  color: white;
 }
 
 #logo {
-  position: fixed;
-  left: 2px;
-  top: -3px;
+  left: 0;
   display: inline;
 }
 
 #nav {
-  position: fixed;
-  top: 102px;
-  background-color: black;
+  /* background-color: #138f97; */
   text-align: center;
-}
-
-#img_box {
-  position: fixed;
-  display: flex;
-  justify-content: center;
   height: 100px;
-  width: 100%;
-  top: 25px;
-}
-.languages {
-  position: absolute;
-  width: 50px;
-  top: 0;
-}
-.kid {
-  width: 90px;
-  padding: 1px;
-  margin: 4px;
-}
-
-#css_img {
-  right: 350px;
-  height: 80px;
-  width: 80px;
-  top: -25px;
-}
-#html_img {
-  right: 1000px;
-  height: 80px;
-  width: 80px;
-  top: -25px;
-}
-#python_img {
-  right: 850px;
-  top: -25px;
-  height: 90px;
-  width: 90px;
-}
-#php_img {
-  right: 40px;
-  height: 100px;
-  width: 100px;
-  top: -31px;
-}
-#js_img {
-  right: 200px;
-  height: 80px;
-  width: 80px;
-  top: -30px;
-}
-a {
-  margin: 40px;
-  font-family: "Bubblegum Sans", cursive;
-}
-
-.game-target {
-  position: absolute;
-  left: 50%;
-  bottom: -80%;
-}
-
-#output {
-  position: fixed;
-  left: 80%;
-  bottom: 20%;
-}
-.game-box {
-  left: 300px;
-  top: 900px;
 }
 
 #game-box {
   display: flex;
   justify-content: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes reverseSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.spinner,
+.innerSpinner {
+  width: 600px;
+  position: relative;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+.spinner.rightSpin {
+  animation-name: spin;
+}
+
+.innerSpinner.leftSpin {
+  animation-name: reverseSpin;
+}
+
+.spinner img {
+  max-width: 100%;
+}
+
+div.spinner-container {
+  width: 600px;
+}
+
+#orange {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#yellwo {
+  position: absolute;
+  top: 70px;
+  left: 74%;
+  transform: translateX(-50%) rotate(37deg);
+}
+#yellow2 {
+  position: absolute;
+  top: 230px;
+  left: 520px;
+  transform: translateX(-50%) rotate(85deg);
+}
+#red {
+  position: absolute;
+  top: 380px;
+  left: 480px;
+  transform: translateX(-50%) rotate(120deg);
+}
+#purple {
+  position: absolute;
+  top: 470px;
+  left: 370px;
+  transform: translateX(-50%) rotate(155deg);
+}
+#blue {
+  position: absolute;
+  top: 460px;
+  left: 210px;
+  transform: translateX(-50%) rotate(190deg);
+}
+#blue2 {
+  position: absolute;
+  top: 370px;
+  left: 100px;
+  transform: translateX(-50%) rotate(240deg);
+}
+#green {
+  position: absolute;
+  top: 210px;
+  left: 90px;
+  transform: translateX(-50%) rotate(280deg);
+}
+#green2 {
+  position: absolute;
+  top: 90px;
+  left: 170px;
+  transform: translateX(-50%) rotate(315deg);
+}
+
+.left {
+  width: 100px;
+  height: 100px;
+}
+.right {
+  width: 100px;
+  height: 100px;
 }

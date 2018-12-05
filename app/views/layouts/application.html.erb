@@ -4,30 +4,21 @@
     <title>CodingForKids</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    <div id="logo">
-      <%= image_tag "logos(1).png" %>
-    </div>
-    <div id="img_box">
-      <%= image_tag "kid1(1).png", id: "kid1", class: "kid"%>
-      <%= image_tag "kid0(1).png" , id:"kid2", class: "kid"%>
-      <%= image_tag "kid2(1).png"  , id:"kid3", class: "kid"%>
-      <%= image_tag "kid3(1).png" , id:"kid4", class: "kid"%>
-      <%= image_tag "css(1).png" , id:"css_img", class: "languages"%>
-      <%= image_tag "html(1)" , id:"html_img", class: "languages" %>
-      <%= image_tag "php(1).png" ,id:"php_img", class: "languages" %>
-      <%= image_tag "js(1).png",id:"js_img", class: "languages" %>
-      <%= image_tag "python.png",id:"python_img", class: "languages" %>
-    </div>
     <nav id="nav">
-      <div>
+      <div class="nav-wrapper yellow lighten-5">
+        <div class="brand-logo" id="logo">
+          <%= image_tag "logo.png" %>
+        </div>
         <div class="right">
           <%= link_to "Games" , games_path %>
           <% if user_signed_in? %>
