@@ -22,11 +22,11 @@
         <div class="right">
           <%= link_to "Games" , games_path %>
           <% if user_signed_in? %>
-            <a href="<%=  user_path(current_user) %>">
+            <a href="<%= user_path(current_user) %>">
               <% if current_user.image.url %>
-                <%= cl_image_tag current_user.image, class: "circle responsive-img"  , :size => "50x50" %>
+                <%= cl_image_tag current_user.image, class: "circle responsive-img", size: "50x50" %>
               <% else %>
-                <%= cl_image_tag image_tag('avatar_b.png'), class: "circle responsive-img"  , :size => "50x50" %>
+                <%= cl_image_tag image_tag('avatar_b.png'), class: "circle responsive-img", size: "50x50" %>
               <% end %>
             </a>
             <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
@@ -37,8 +37,9 @@
         </div>
       </div>
     </nav>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+   <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
     <%= yield %>
+
   </body>
 </html>

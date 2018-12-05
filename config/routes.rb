@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  get 'users/show'
+  devise_for :admins
   devise_for :users
+
+  get 'users/show'
   root "pages#home"
   resources :games
   resources :levels

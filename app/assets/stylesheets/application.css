@@ -12,7 +12,14 @@ body {
 }
 
 #nav {
+<<<<<<< HEAD
   /* background-color: #138f97; */
+=======
+  position: fixed;
+  display: inline-block;
+  top: 102px;
+  background-color: black;
+>>>>>>> 103a7bda1bdad859f37172d7f96958a58722fa3a
   text-align: center;
   height: 100px;
 }
@@ -21,6 +28,7 @@ body {
   display: flex;
   justify-content: center;
 }
+<<<<<<< HEAD
 
 @keyframes spin {
   0% {
@@ -55,6 +63,52 @@ body {
 
 .innerSpinner.leftSpin {
   animation-name: reverseSpin;
+=======
+.languages {
+  position: relative;
+  display: inline-flex;
+  width: 50px;
+  top: 0;
+}
+.kid {
+  width: 90px;
+  padding: 1px;
+  margin: 4px;
+position: relative;
+left: 200px;
+  
+}
+
+#css_img {
+  right: 300px;
+  height: 80px;
+  width: 80px;
+  top: -25px;
+}
+#html_img {
+  right: -150px;
+  height: 80px;
+  width: 80px;
+  top: -25px;
+}
+#python_img {
+  right: 750px;
+  top: -25px;
+  height: 90px;
+  width: 90px;
+}
+#php_img {
+  right: -350px;
+  height: 100px;
+  width: 100px;
+  top: -31px;
+}
+#js_img {
+  right: -90px;
+  height: 80px;
+  width: 80px;
+  top: -30px;
+>>>>>>> 103a7bda1bdad859f37172d7f96958a58722fa3a
 }
 
 .spinner img {
