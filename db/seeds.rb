@@ -9,7 +9,7 @@
 Game.destroy_all
 
 Game.create(javascript: "" "
-var jsRuns = [];
+ var jsRuns = [];
 var button = document.querySelector('.robot-icon');
 var x = true;
 button.addEventListener('click', Move);
@@ -29,14 +29,15 @@ function Move() {
   }
   x = !x;
 }
+
     " "",
             html: "" "
   <div class='robot-game'>
       <button class='robot-icon'>Move</button>
       <img class='robot-img' src='https://res.cloudinary.com/dkfx04d8y/image/upload/v1543740626/rebo_R.png' >
       <audio id='audio' src='https://res.cloudinary.com/dkfx04d8y/video/upload/v1543835520/Short-electronic-background-music.mp3'></audio>
-    </div>
-     " " ",
+    </div> 
+     " "",
             css: "" "
   .robot-game {
   position: relative;
@@ -56,6 +57,12 @@ function Move() {
   position: absolute;
   top: 50px;
 }
+
+.js-img {
+  position: absolute;
+  top: 30px;
+  right: 0;
+} 
 " "")
 
 Game.create(

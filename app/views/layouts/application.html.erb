@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -15,12 +16,16 @@
   </head>
   <body>
     <nav id="nav">
-      <div class="nav-wrapper yellow lighten-5">
+      <div class="nav-wrapper  light-blue darken-4">
         <div class="brand-logo" id="logo">
-          <%= image_tag "logo.png" %>
+          <%= link_to root_path do %>
+            <%= image_tag "logo.png" %>
+          <% end %>
+          <h4>
+            Coding For Kids
+          </h4>
         </div>
         <div class="right">
-          <%= link_to "Games" , games_path %>
           <% if user_signed_in? %>
             <a href="<%= user_path(current_user) %>">
               <% if current_user.image.url %>
@@ -31,15 +36,14 @@
             </a>
             <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
           <% else %>
-            <%= link_to "Log in", new_user_session_path %>
-            <%= link_to "Sign Up", new_user_registration_path %>
+            <%= link_to "Login", new_user_session_path %>
+            <%= link_to "SignUp", new_user_registration_path %>
           <% end %>
         </div>
       </div>
     </nav>
-   <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
-
   </body>
 </html>
