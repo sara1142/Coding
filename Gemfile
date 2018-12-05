@@ -2,8 +2,13 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
+<<<<<<< HEAD
+gem "devise"
+gem 'mini_magick'
+=======
 gem 'devise'
 gem "mini_magick"
+>>>>>>> 103a7bda1bdad859f37172d7f96958a58722fa3a
 gem 'cloudinary'
 gem 'rest-client', '~> 2.0'
 gem 'carrierwave'

@@ -147,3 +147,92 @@ function jump() {
 }
 " "",
 )
+
+Game.create(
+  javascript: "" "
+  var $keys = $('.octave div');
+
+$keys.on('mouseover', function() {
+  const pitch = $(this).data('pitch');
+  const context = new (window.AudioContext || window.webkitAudioContext)();
+  const oscillator = context.createOscillator();
+  oscillator.type = 'sine';
+  oscillator.frequency.value = pitch;
+  oscillator.connect(context.destination);
+  oscillator.start();
+});
+
+$keys.on('mouseout', function() {
+  location.reload();
+});
+  " "",
+  html: "" "
+   <div class='octave'>
+      <div class='key key1' data-pitch='261.6256'></div>
+      <div class='key key2' data-pitch='293.6648'></div>
+      <div class='key key3' data-pitch='329.6276'></div>
+      <div class='key key4' data-pitch='349.2282'></div>
+      <div class='key key5' data-pitch='391.9954'></div>
+      <div class='key key6' data-pitch='440.0000'></div>
+      <div class='key key7' data-pitch='493.8833'></div>
+
+      <div class='blackKey blackKey1' data-pitch='277.1826'></div>
+      <div class='blackKey blackKey2' data-pitch='311.1270'></div>
+      <div class='blackKey blackKey3' data-pitch='369.9944'></div>
+      <div class='blackKey blackKey4' data-pitch='415.3047'></div>
+      <div class='blackKey blackKey5' data-pitch='466.1638'></div>
+    </div>
+  " "",
+  css: "" "
+  .octave {
+  height: 200px;
+  width: 500px;
+  background: dodgerblue;
+  display: flex;
+  position: relative;
+}
+
+.key {
+  width: calc(100% / 7);
+  height: 100%;
+  background: white;
+  border: 1px solid black;
+}
+
+.key:hover {
+  background: gray;
+}
+
+.blackKey {
+  position: absolute;
+  height: 50%;
+  width: calc(100% / 12);
+  background: black;
+  transform: translateX(-50%);
+}
+
+.blackKey:hover {
+  background: gray;
+}
+
+.blackKey1 {
+  left: calc(100% / 7);
+}
+
+.blackKey2 {
+  left: calc(100% / 7 * 2);
+}
+
+.blackKey3 {
+  left: calc(100% / 7 * 4);
+}
+
+.blackKey4 {
+  left: calc(100% / 7 * 5);
+}
+
+.blackKey5 {
+  left: calc(100% / 7 * 6);
+}
+  " "",
+)
